@@ -1,10 +1,12 @@
 package com.diargegaj.horoscopeinfo.models
 
+import androidx.room.Entity
 import com.google.gson.annotations.SerializedName
 
 /**
  * Created by Diar Gegaj on 21-05-02.
  */
+@Entity(tableName = "horoscope_info")
 data class HoroscopeModel (
     @SerializedName("date_range")
     val dateRange: String,
