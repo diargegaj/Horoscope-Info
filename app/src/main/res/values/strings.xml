@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Horoscope Info</string>
+    <string name="compatibility">Compatibility: %1$s</string>
+    <string name="sign_says_to_you">%1$s Says to you: \n  %2$s</string>
+    <string name="lucky_number_for_today">Lucky Number for Today: %1$s</string>
+    <string name="mood">Mood: %1$s</string>
+    <string name="lucky_time_for_today">Lucky Time for Today: %1$s</string>
+    <string name="horoscope_per_date">Horoscope per date: %1$s</string>
 </resources>

@@ -1,12 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
-        android:id="@+id/test"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="TEST"/>
+        android:id="@+id/horoscopeDateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/horoscope_per_date"
+        android:padding="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/signSayToYouTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_says_to_you"
+        android:textColor="@color/black"
+        android:padding="5dp"
+        app:layout_constraintTop_toBottomOf="@id/horoscopeDateTextView"
+        app:layout_constraintBottom_toTopOf="@id/compatibilityTextView"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/compatibilityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/compatibility"
+        android:textColor="@color/black"
+        android:padding="5dp"
+        app:layout_constraintTop_toBottomOf="@id/signSayToYouTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/moodTextView" />
+
+    <TextView
+        android:id="@+id/moodTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mood"
+        android:textColor="@color/black"
+        android:padding="5dp"
+        app:layout_constraintTop_toBottomOf="@id/compatibilityTextView"
+        app:layout_constraintBottom_toTopOf="@id/luckyNumberTextView"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/luckyNumberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lucky_number_for_today"
+        android:textColor="@color/black"
+        android:padding="5dp"
+        app:layout_constraintTop_toBottomOf="@id/moodTextView"
+        app:layout_constraintBottom_toTopOf="@id/luckyTimeTextViw"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/luckyTimeTextViw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lucky_time_for_today"
+        android:textColor="@color/black"
+        android:padding="5dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/luckyNumberTextView"
+        app:layout_constraintStart_toStartOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
