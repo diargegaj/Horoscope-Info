@@ -1,10 +1,12 @@
 package com.diargegaj.horoscopeinfo.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.diargegaj.horoscopeinfo.R
+import com.diargegaj.horoscopeinfo.ui.activity.SignsinfoActivity
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.item_signs_title.view.*
 
@@ -36,6 +38,11 @@ class SignsTitleAdapter: RecyclerView.Adapter<SignsTitleAdapter.SignsTitleViewHo
     inner class SignsTitleViewHolder(override val containerView: View) : RecyclerView.ViewHolder(containerView), LayoutContainer {
         fun fillView(signName: String) {
             containerView.signTitle.text = signName
+
+            containerView.signTitle.setOnClickListener {
+                val intent = Intent(containerView.context, SignsinfoActivity::class.java)
+                containerView.context.startActivity(intent)
+            }
         }
     }
 }

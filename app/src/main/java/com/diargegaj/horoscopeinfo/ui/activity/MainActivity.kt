@@ -1,8 +1,9 @@
-package com.diargegaj.horoscopeinfo
+package com.diargegaj.horoscopeinfo.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.diargegaj.horoscopeinfo.R
 import com.diargegaj.horoscopeinfo.adapter.SignsTitleAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 
