@@ -14,12 +14,7 @@ class HoroscopeInfoRepository {
     private val databaseHelper = DatabaseHelper()
     private val TAG = "HoroscopeInfoRepository"
 
-    fun insertHoroscopeInfo(horoscopeModel: HoroscopeModel) {
-        databaseHelper.insertHoroscopeInfo(horoscopeModel)
-    }
-
     fun getHoroscopeInfo(sign: String, day: String): LiveData<HoroscopeModel> {
-
         val dis = RetrofitInstance.service.getHoroscopeInfoPerSign(sign, day)
             .subscribeOn(Schedulers.io())
             .subscribe ({
