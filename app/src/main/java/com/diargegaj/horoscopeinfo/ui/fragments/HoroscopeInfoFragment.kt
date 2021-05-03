@@ -26,14 +26,9 @@ class HoroscopeInfoFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        Log.d("diari1", "this.arg = ${this.arguments}")
         val bundle = this.arguments
         val signName = bundle?.getString(SIGN_NAME)
         val day = bundle?.getString(DAY)
-
-        Log.d("diari1", "bundle = $bundle")
-
-        Log.d("diari1", "extras come to fragment: $signName, $day")
 
         val horoscopeInfoViewModel = ViewModelProvider(this).get(HoroscopeInfoFragmentViewModel::class.java)
 

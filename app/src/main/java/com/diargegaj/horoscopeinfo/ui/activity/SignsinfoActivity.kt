@@ -42,7 +42,6 @@ class SignsinfoActivity: AppCompatActivity() {
         val todayFragment = HoroscopeInfoFragment()
         todayFragment.arguments = todayBundle
 
-
         val tomorrowBundle = Bundle()
         tomorrowBundle.putString(DAY, "tomorrow")
         tomorrowBundle.putString(SIGN_NAME, signNameFromExtras)
