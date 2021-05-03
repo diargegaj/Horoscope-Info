@@ -2,6 +2,7 @@ package com.diargegaj.horoscopeinfo.ui.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.diargegaj.horoscopeinfo.R
 import com.diargegaj.horoscopeinfo.adapter.ViewPagerAdapter
 import com.diargegaj.horoscopeinfo.ui.fragments.HoroscopeInfoFragment
@@ -28,26 +29,9 @@ class SignsinfoActivity: AppCompatActivity() {
     }
 
     private fun createFragments(adapter: ViewPagerAdapter) {
-        val yesterdayBundle = Bundle()
-        yesterdayBundle.putString(DAY, "yesterday")
-        yesterdayBundle.putString(SIGN_NAME, signNameFromExtras)
-
-        val yesterdayFragment = HoroscopeInfoFragment()
-        yesterdayFragment.arguments = yesterdayBundle
-
-        val todayBundle = Bundle()
-        todayBundle.putString(DAY, "today")
-        todayBundle.putString(SIGN_NAME, signNameFromExtras)
-
-        val todayFragment = HoroscopeInfoFragment()
-        todayFragment.arguments = todayBundle
-
-        val tomorrowBundle = Bundle()
-        tomorrowBundle.putString(DAY, "tomorrow")
-        tomorrowBundle.putString(SIGN_NAME, signNameFromExtras)
-
-        val tomorrowFragment = HoroscopeInfoFragment()
-        tomorrowFragment.arguments = tomorrowBundle
+        val yesterdayFragment = createYesterdayFragment()
+        val todayFragment = createTodayFragment()
+        val tomorrowFragment = createTomorrowFragment()
 
         adapter.addFragment(yesterdayFragment, "Yesterday")
         adapter.addFragment(todayFragment, "Today")
@@ -57,6 +41,37 @@ class SignsinfoActivity: AppCompatActivity() {
 
         tabLayout.setupWithViewPager(horoscopeInfoViewPager)
         tabLayout.getTabAt(1)?.select()
+    }
+
+    private fun createTomorrowFragment(): Fragment {
+        val tomorrowBundle = Bundle()
+        tomorrowBundle.putString(DAY, "tomorrow")
+        tomorrowBundle.putString(SIGN_NAME, signNameFromExtras)
+
+        val tomorrowFragment = HoroscopeInfoFragment()
+        tomorrowFragment.arguments = tomorrowBundle
+        return tomorrowFragment
+    }
+
+    private fun createTodayFragment(): Fragment {
+        val todayBundle = Bundle()
+        todayBundle.putString(DAY, "today")
+        todayBundle.putString(SIGN_NAME, signNameFromExtras)
+
+        val todayFragment = HoroscopeInfoFragment()
+        todayFragment.arguments = todayBundle
+        return todayFragment
+    }
+
+    private fun createYesterdayFragment(): Fragment {
+        val yesterdayBundle = Bundle()
+        yesterdayBundle.putString(DAY, "yesterday")
+        yesterdayBundle.putString(SIGN_NAME, signNameFromExtras)
+
+        val yesterdayFragment = HoroscopeInfoFragment()
+        yesterdayFragment.arguments = yesterdayBundle
+
+        return yesterdayFragment
     }
 
     companion object {
