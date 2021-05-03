@@ -57,6 +57,7 @@ class SignsinfoActivity: AppCompatActivity() {
         horoscopeInfoViewPager.adapter = adapter
 
         tabLayout.setupWithViewPager(horoscopeInfoViewPager)
+        tabLayout.getTabAt(1)?.select()
     }
 
     companion object {
