@@ -2,7 +2,7 @@ package com.diargegaj.horoscopeinfo.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
 import com.diargegaj.horoscopeinfo.R
 import com.diargegaj.horoscopeinfo.adapter.SignsTitleAdapter
 import kotlinx.android.synthetic.main.activity_main.*
@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         val adapter = SignsTitleAdapter()
         adapter.setSigns(getAllSigns())
 
-        signsRecyclerView.layoutManager = LinearLayoutManager(this)
+        signsRecyclerView.layoutManager = GridLayoutManager(this, 2)
         signsRecyclerView.adapter = adapter
     }
 

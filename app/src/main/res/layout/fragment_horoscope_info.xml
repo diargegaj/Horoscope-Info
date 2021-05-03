@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black">
 
     <TextView
         android:id="@+id/horoscopeDateTextView"
@@ -11,6 +12,7 @@
         android:layout_height="wrap_content"
         android:text="@string/horoscope_per_date"
         android:padding="10dp"
+        android:textColor="@color/white"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -20,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/sign_says_to_you"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:padding="5dp"
         app:layout_constraintTop_toBottomOf="@id/horoscopeDateTextView"
         app:layout_constraintBottom_toTopOf="@id/compatibilityTextView"
@@ -32,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/compatibility"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:padding="5dp"
         app:layout_constraintTop_toBottomOf="@id/signSayToYouTextView"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/mood"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:padding="5dp"
         app:layout_constraintTop_toBottomOf="@id/compatibilityTextView"
         app:layout_constraintBottom_toTopOf="@id/luckyNumberTextView"
@@ -54,7 +56,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/lucky_number_for_today"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:padding="5dp"
         app:layout_constraintTop_toBottomOf="@id/moodTextView"
         app:layout_constraintBottom_toTopOf="@id/luckyTimeTextViw"
@@ -65,7 +67,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/lucky_time_for_today"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:padding="5dp"
         android:layout_marginBottom="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
