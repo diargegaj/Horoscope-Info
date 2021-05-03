@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.diargegaj.horoscopeinfo.R
 import com.diargegaj.horoscopeinfo.ui.activity.SignsinfoActivity
+import com.diargegaj.horoscopeinfo.ui.activity.SignsinfoActivity.Companion.SIGN_NAME
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.item_signs_title.view.*
 
@@ -41,6 +42,7 @@ class SignsTitleAdapter: RecyclerView.Adapter<SignsTitleAdapter.SignsTitleViewHo
 
             containerView.signTitle.setOnClickListener {
                 val intent = Intent(containerView.context, SignsinfoActivity::class.java)
+                intent.putExtra(SIGN_NAME, signName)
                 containerView.context.startActivity(intent)
             }
         }

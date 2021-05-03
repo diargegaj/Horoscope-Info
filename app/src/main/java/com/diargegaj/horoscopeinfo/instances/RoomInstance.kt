@@ -8,5 +8,8 @@ import com.diargegaj.horoscopeinfo.database.HoroscopeInfoDatabase
  * Created by Diar Gegaj on 21-05-03.
  */
 object RoomInstance {
-    val db = Room.databaseBuilder(CustomApplication.instance, HoroscopeInfoDatabase::class.java, "horoscope-info-database").build()
+    val db by lazy {
+        Room.databaseBuilder(CustomApplication.instance, HoroscopeInfoDatabase::class.java, "horoscope-info-database")
+            .build()
+    }
 }

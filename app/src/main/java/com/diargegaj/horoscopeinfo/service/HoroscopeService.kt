@@ -10,9 +10,10 @@ import retrofit2.http.Query
  */
 interface HoroscopeService {
 
-    @POST("/?day=today")
+    @POST("/")
     fun getHoroscopeInfoPerSign(
-        @Query("sign") sign: String
+        @Query("sign") sign: String,
+        @Query("day") day: String
     ): Observable<HoroscopeModel>
 
     companion object {
