@@ -46,6 +46,17 @@ class HoroscopeInfoFragment: Fragment() {
                 signSayToYouTextView.text =
                     String.format(context!!.getString(R.string.sign_says_to_you), it.sign, it.description)
 
+                compatibilityTextView.text =
+                    String.format(context!!.getString(R.string.compatibility), it.compatibility)
+
+                moodTextView.text =
+                    String.format(context!!.getString(R.string.mood), it.mood)
+
+                luckyNumberTextView.text =
+                    String.format(context!!.getString(R.string.lucky_number_for_today), it.luckyNumber)
+
+                luckyTimeTextViw.text =
+                    String.format(context!!.getString(R.string.lucky_time_for_today), it.luckyTime)
             }
         })
 
